@@ -10,6 +10,7 @@
         <link href="header.css" rel="stylesheet">
         <link href="about.css" rel="stylesheet">
         <link href="footer.css" rel="stylesheet">
+        <div class="hamburger">&#9776;</div>  
     </head>
   <body>
     <div class="container">
@@ -139,4 +140,14 @@
         <p class="copyright">© 2024 Mayacare. Some Rights Reserved</p>
     </footer>
   </body>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('nav ul');
+
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('show'); 
+    });
+</script>
+
 </html>
