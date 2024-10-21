@@ -60,52 +60,24 @@ body {
   }
 }
 
-/* Base styles */
-.nav {
-  display: flex;
-  gap: 1rem;
-}
 
-/* Hide the hamburger icon on desktop */
 .hamburger {
   display: none;
-  font-size: 30px;
-  cursor: pointer;
 }
 
-/* Hide navigation on mobile by default */
-nav ul {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* Mobile styles */
 @media (max-width: 768px) {
-  .nav {
-      display: none;
-      flex-direction: column;
-      background-color: white;
-      position: absolute;
-      top: 60px; /* Adjust depending on the height of the header */
-      left: 0;
-      width: 100%;
-      text-align: center;
-  }
-
-  .nav.show {
-      display: flex;
-  }
-
   .hamburger {
       display: block;
   }
-}
-
-/* Style for active navigation links on mobile */
-.nav-link {
-  padding: 10px;
-  font-size: 18px;
+  .navbar ul {
+      display: none;
+  }
+  .navbar ul.show {
+      display: block;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      background-color: white;
+      width: 200px;
+  }
 }
