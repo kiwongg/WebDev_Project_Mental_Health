@@ -1,0 +1,143 @@
+:root {
+    --primary-color: #264B34;
+    --secondary-color: #59B17B;
+    --text-color: #333;
+    --background-color: #f5f5f5;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover, .btn-outline-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-section {
+    padding: 50px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+.container {
+    padding: 16px;
+}
+
+
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Column settings for team members */
+.column {
+    flex: 1; /* Ensures the columns are flexible */
+    max-width: 33.33%; /* Set each column to take one-third of the row */
+    padding: 10px;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: 16px;
+    text-align: left;
+  }
+  
+  /* Ensuring all images are of equal size and responsive */
+  .card img {
+    width: 80%;
+    height: 250px; /* Set a fixed height for consistency */
+    object-fit: cover; /* Ensures the image scales properly within the set height */
+    border-radius: 5px;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  }
+  
+  /* Making the container responsive */
+  @media (max-width: 768px) {
+    .column {
+      max-width: 100%;
+    }
+  } 
+  
+.content-section {
+    max-width: 800px; /* Limit the width of the content */
+    margin: 0 auto; /* Center the content */
+    padding: 50px 20px; 
+    background-color: #ffcbd6; 
+}
+
+.title {
+    font-size: 24px; /* Title size */
+    font-weight: bold; /* Make title bold */
+    margin-bottom: 20px; /* Spacing below title */
+    text-align: left; /* Align text to the left */
+}
+
+p {
+    font-size: 18px; /* Font size for paragraphs */
+    line-height: 1.6; /* Line height for better readability */
+    margin-bottom: 16px; /* Space between paragraphs */
+}
+
+
+    #about {
+        background-color: #f4f4f4; /* Change this to your desired color */
+        padding: 50px 20px;
+    }
+    
+    .about-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: var(--secondary-color); /* If you want to change this too */
+    }

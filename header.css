@@ -1,0 +1,61 @@
+/* General body styles for consistency across all pages */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+
+/* Header styles (consistent across all pages) */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+  border-bottom: 2px solid #ddd;
+  width: 100%;
+  position: relative;
+}
+
+/* Logo Text Styling */
+.logo-text {
+  font-size: 24px; /* Adjust the size to your preference */
+  font-weight: bold;
+  margin-left: 10px; /* Add some space between logo and text */
+}
+
+/* Navigation Styles */
+.nav {
+  display: flex; /* Use flex to align items properly */
+}
+
+.nav-link {
+  padding: 10px 15px; /* Add padding for a better click area */
+  color: #264B34; /* Use your specified color */
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s; /* Add transition for effects */
+}
+
+/* Hover Effects for Navigation Links */
+.nav-link:hover {
+  color: #59B17B; /* Change color on hover */
+  transform: scale(1.1); /* Slightly enlarge the link */
+}
+
+/* Button Styles */
+.btn {
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for button effects */
+}
+
+/* Hover Effects for Buttons */
+.btn:hover {
+  background-color: #59B17B; /* Change background on hover */
+  transform: translateY(-2px); /* Slightly lift the button */
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+  .nav {
+      flex-direction: column; /* Stack navigation links on smaller screens */
+  }
+}
