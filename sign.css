@@ -234,14 +234,7 @@ footer {
   z-index: 999;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  header {
-      display: flex;
-      justify-content: space-between;
-      padding: 1rem;
-      position: relative;
-  }
+
 
   
   header nav ul {
@@ -274,9 +267,10 @@ footer {
   header nav ul.show {
       display: flex;
   }
-}
 
 
+
+/* Hamburger Menu */
 .hamburger {
   display: none; 
   position: absolute;
@@ -288,6 +282,9 @@ footer {
   z-index: 1001;
 }
 
-.hero {
-  margin-top: 60px;
+/* Show Hamburger on small screens */
+@media (max-width: 768px) {
+  .hamburger {
+      display: block;
+  }
 }
