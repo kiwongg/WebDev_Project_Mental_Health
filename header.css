@@ -1,98 +1,116 @@
-/* General body styles for consistency across all pages */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #ffffff;
+:root {
+  --primary-color: #264B34;
+  --secondary-color: #59B17B;
+  --text-color: #fff;
 }
 
-/* Header styles (consistent across all pages) */
-.header {
-  padding: 20px;
-  font-size: 24px;
-  text-align: center;
-  background: white;
-  border-bottom: 2px solid #ddd;
-  width: 100%;
-  position: relative;
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--primary-color);
+  padding: 15px 20px;
 }
 
-/* Logo Text Styling */
-.logo-text {
-  font-size: 24px;
+header img {
+  height: 40px;
+  width: auto;
+}
+
+header .logo-text {
+  color: white;
   font-weight: bold;
   margin-left: 10px;
 }
 
-/* Navigation Styles */
-.nav {
+header .nav {
   display: flex;
-  gap: 20px;
-  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.nav-link {
-  padding: 10px 15px;
-  color: #264B34;
+header .nav li {
+  margin: 0 15px;
+}
+
+header .nav a {
+  color: white;
   text-decoration: none;
-  transition: color 0.3s, transform 0.3s;
+  font-size: 16px;
+  font-weight: 500;
 }
 
-/* Hover Effects for Navigation Links */
-.nav-link:hover {
-  color: #59B17B;
-  transform: scale(1.1);
+header .nav a:hover {
+  color: var(--secondary-color);
 }
 
-/* Button Styles */
-.btn {
-  transition: background-color 0.3s, transform 0.3s;
+header .btn-outline-primary {
+  color: white;
+  border-color: white;
+  font-size: 14px;
 }
 
-/* Hover Effects for Buttons */
-.btn:hover {
-  background-color: #59B17B;
-  transform: translateY(-2px);
+header .btn-outline-primary:hover {
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
 }
 
-/* Hamburger menu styles (for mobile) */
 .hamburger {
-  display: none; /* Hidden on larger screens */
-  flex-direction: column;
+  display: none;
+  font-size: 30px;
+  color: white;
   cursor: pointer;
 }
 
-.hamburger div {
-  width: 25px;
-  height: 3px;
-  background-color: #264B34;
-  margin: 4px 0;
-  transition: all 0.3s ease;
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  header .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    display: none; /* Keep it hidden initially */
+    width: 100%;
+    background-color: var(--primary-color);
+  }
+
+  /* Show the navigation when clicked */
+  header .nav.show {
+    display: flex; /* Show the nav when class 'show' is added */
+  }
+
+  header .nav li {
+    margin: 10px 0; /* Vertical spacing for nav items */
+  }
+
+  header .hamburger {
+    display: block; /* Show hamburger menu */
+  }
+
+  header img {
+    margin-bottom: 10px; /* Add space below logo */
+  }
 }
 
-/* Mobile view styles */
-@media (max-width: 768px) {
-  .nav {
-    flex-direction: column;
-    display: none; /* Hide menu by default on mobile */
+/* Adjust button alignment on mobile */
+@media (max-width: 576px) {
+  header .btn-outline-primary {
+    font-size: 12px; /* Smaller button text */
   }
 
-  .header {
-    justify-content: space-between;
-  }
-
-  .hamburger {
-    display: flex; /* Show hamburger menu */
-  }
-z
-  .hamburger.active + .nav {
-    display: flex; /* Show nav links when hamburger is clicked */
-  }
-
-  .logo-text {
-    font-size: 20px;
+  /* Adjust margin for button container */
+  header .text-end {
+    text-align: left; /* Align left on smaller screens */
+    margin-top: 10px; /* Add some space above */
   }
 }
