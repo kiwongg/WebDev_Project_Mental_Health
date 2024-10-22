@@ -6,31 +6,31 @@
 }
 
 body {
-    width: 500px;
+    max-width: 500px; /* Changed from width to max-width */
     margin: 0 auto;
-    padding: 50px;
+    padding: 20px; /* Reduced padding for smaller screens */
     font-family: 'Poppins', sans-serif;
-  }
-  
-  div.elem-group {
+}
+
+div.elem-group {
     margin: 20px 0;
-  }
-  
-  div.elem-group.inlined {
+}
+
+div.elem-group.inlined {
     width: 49%;
     display: inline-block;
     float: left;
     margin-left: 1%;
-  }
-  
-  label {
+}
+
+label {
     display: block;
     font-family: 'Nanum Gothic';
     padding-bottom: 10px;
     font-size: 1.25em;
-  }
-  
-  input, select, textarea {
+}
+
+input, select, textarea {
     border-radius: 2px;
     border: 2px solid #777;
     box-sizing: border-box;
@@ -38,22 +38,22 @@ body {
     font-family: 'Nanum Gothic';
     width: 100%;
     padding: 10px;
-  }
-  
-  div.elem-group.inlined input {
+}
+
+div.elem-group.inlined input {
     width: 95%;
     display: inline-block;
-  }
-  
-  textarea {
+}
+
+textarea {
     height: 250px;
-  }
-  
-  hr {
+}
+
+hr {
     border: 1px dotted #ccc;
-  }
-  
-  button {
+}
+
+button {
     height: 40px;
     background: #59B17B;
     border: none;
@@ -62,22 +62,11 @@ body {
     font-family: 'Nanum Gothic';
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  button:hover {
-    border: 2px solid white;
-  }
-
-  .btn {
-    display: inline-block;
-    font-weight: 400;
-    text-align: center;
-    text-decoration: none;
-    padding: 0.375rem 0.75rem;
-    border: 1px solid transparent;
-    border-radius: 0.25rem;
 }
 
+button:hover {
+    border: 2px solid white;
+}
 
 .btn {
     display: inline-block;
@@ -110,4 +99,39 @@ body {
 .px-4 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+}
+
+/* Media queries for responsiveness */
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Reduced padding for smaller screens */
+    }
+
+    div.elem-group.inlined {
+        width: 100%; /* Make inlined elements full width on smaller screens */
+        display: block; /* Stack inlined elements vertically */
+    }
+
+    div.elem-group.inlined input {
+        width: 100%; /* Make inlined inputs full width on smaller screens */
+    }
+
+    button {
+        width: 100%; /* Make button full width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 5px; /* Reduced padding for very small screens */
+    }
+
+    label {
+        font-size: 1em; /* Reduced font size for very small screens */
+    }
+
+    input, select, textarea {
+        font-size: 1em; /* Reduced font size for very small screens */
+    }
 }
