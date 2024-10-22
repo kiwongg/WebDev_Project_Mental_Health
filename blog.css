@@ -9,12 +9,35 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
+  margin: 0;
+  padding: 0;
 }
 
+/* Blog card styling */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
+h2 {
+  font-size: 28px;
+  color: var(--primary-color);
+}
+
+h5 {
+  font-size: 16px;
+  color: #777;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Button styles */
 .btn-primary {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
@@ -36,29 +59,25 @@ h1, h2, h3, h4, h5, h6 {
   padding: 20px;
 }
 
-.header {
-  text-align: center;
-  padding: 40px 0;
-  font-size: 40px;
-  background-color: #264B34;
-  color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
+/* Responsive layout for left and right columns */
 .leftcolumn, .rightcolumn {
   margin-top: 20px;
+  padding: 0 10px;
 }
 
+/* Left column width */
 .leftcolumn {
   width: 75%;
+  float: left;
 }
 
+/* Right column width */
 .rightcolumn {
   width: 25%;
-  padding-left: 20px;
+  float: right;
 }
 
+/* Blog card style */
 .card {
   background-color: #fff;
   border-radius: 10px;
@@ -68,119 +87,62 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Hover effect on blog cards */
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Blog images */
 .card img {
   width: 100%;
+  height: auto;
   border-radius: 5px;
   margin-bottom: 10px;
 }
 
+/* Footer styling (already included in footer.css) */
 .footer {
-  padding: 40px 0;
-  background-color: #264B34;
-  color: white;
-  text-align: center;
   margin-top: 20px;
 }
 
-.footer-links {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 0;
-}
-
-.footer-links li {
-  display: inline-block;
-  padding: 0 10px;
-}
-
-.footer .social {
-  padding-bottom: 25px;
-}
-
-.footer .social > a {
-  font-size: 24px;
-  width: 40px;
-  height: 40px;
-  display: inline-block;
-  text-align: center;
-  border-radius: 50%;
-  margin: 0 8px;
-  color: inherit;
-  opacity: 0.75;
-  transition: opacity 0.3s;
-}
-
-.footer .social > a:hover {
-  opacity: 1;
-}
-
-@media screen and (max-width: 800px) {
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  /* Columns stack on mobile */
   .leftcolumn, .rightcolumn {
-      width: 100%;
-      padding: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Reduce card padding and margin for smaller screens */
+  .card {
+    padding: 15px;
+    margin-top: 15px;
+  }
+
+  /* Blog card titles font-size reduction for smaller screens */
+  h2 {
+    font-size: 22px;
+  }
+
+  h5 {
+    font-size: 14px;
   }
 }
 
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  header {
-      display: flex;
-      justify-content: space-between;
-      padding: 1rem;
-      position: relative;
+@media screen and (max-width: 576px) {
+  /* Extra small screens - further reduce padding */
+  .card {
+    padding: 10px;
+    margin-top: 10px;
   }
 
-  
-  header nav ul {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      right: 0;
-      background-color: #00796b;
-      width: 100%;
-      z-index: 1000;
-      text-align: right;
-      padding: 1rem;
-      align-items: flex-end;
-      padding-right: 20px;
+  h2 {
+    font-size: 20px;
   }
 
-  header nav ul li {
-      margin: 1rem 0;
-  }
-
-  header .hamburger {
-      display: block;
-      cursor: pointer;
-      font-size: 2rem;
-      color: #fff;
-  }
-
-  
-  header nav ul.show {
-      display: flex;
+  h5 {
+    font-size: 12px;
   }
 }
-
-
-.hamburger {
-  display: none; 
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 24px;
-  cursor: pointer;
-  color: #fff;
-  z-index: 1001;
-}
-
-.hero {
-  margin-top: 60px;
-} 
