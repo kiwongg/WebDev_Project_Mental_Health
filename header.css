@@ -1,127 +1,90 @@
-:root {
-  --primary-color: #264B34;
-  --secondary-color: #59B17B;
-  --text-color: #333;
-}
-
+/* General body styles for consistency across all pages */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background: #ffffff;
 }
 
-header {
-  background-color: var(--primary-color);
-  padding: 10px 20px;
-  color: white;
+/* Header styles */
+.header {
+  padding: 20px;
+  font-size: 24px;
+  text-align: center;
+  background: white;
+  border-bottom: 2px solid #ddd;
+  width: 100%;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-header img {
-  height: 40px;
-  width: auto;
+/* Logo Text Styling */
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 10px;
 }
 
-header .nav {
+/* Navigation Styles */
+.nav {
   display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  gap: 20px;
+  align-items: center;
 }
 
-header .nav li {
-  margin: 0 10px;
-}
-
-header .nav a {
-  color: white;
+/* Navigation Links */
+.nav-link {
+  padding: 10px 15px;
+  color: #264B34;
   text-decoration: none;
-  font-size: 16px;
+  transition: color 0.3s, transform 0.3s;
 }
 
-header .nav a:hover {
-  color: var(--secondary-color);
+/* Hover Effects for Navigation Links */
+.nav-link:hover {
+  color: #59B17B;
+  transform: scale(1.1);
 }
 
-header .btn-outline-primary {
-  color: white;
-  border-color: white;
-  font-size: 14px;
-}
-
-header .btn-outline-primary:hover {
-  color: var(--secondary-color);
-  border-color: var(--secondary-color);
-}
-
+/* Hamburger icon */
 .hamburger {
-  display: none;
-  font-size: 28px;
-  color: white;
+  display: none; 
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
   cursor: pointer;
+  color: #264B34; /* Changed to match the link color */
+  z-index: 1001;
 }
 
-/* Hover Effects for Menu Items */
-header ul li a {
-  padding: 5px;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-header ul li a:hover {
-  background-color: var(--secondary-color);
-  color: white;
-  border-radius: 5px;
-}
-
-/* Media Queries for Mobile Responsiveness */
-@media screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show hamburger icon on mobile */
   }
 
-  header .hamburger {
-    display: block;
-  }
-
-  /* Hide navigation menu initially on mobile */
-  header .nav {
-    display: none;
+  .nav {
+    display: none; /* Hide navigation by default */
     flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on your header height */
+    right: 0;
+    background-color: #ffffff; /* Background color for dropdown */
     width: 100%;
-    background-color: var(--primary-color);
+    z-index: 1000;
+    text-align: right;
+    padding: 1rem;
+    align-items: flex-end;
   }
 
-  /* Show the menu when the hamburger is clicked */
-  header .nav.show {
-    display: flex;
-    padding: 10px;
+  .nav.show {
+    display: flex; /* Show navigation when 'show' class is added */
   }
 
-  /* Navigation items stacked vertically on mobile */
-  header .nav li {
-    margin: 10px 0;
+  .nav-link {
+    margin: 1rem 0; /* Vertical spacing for mobile links */
   }
-
-  /* Center the logo on small screens */
-  header img {
-    margin-bottom: 10px;
-  }
-}
-
-/* Further Adjustments for Very Small Screens */
-@media screen and (max-width: 576px) {
-  header {
-    padding: 5px 10px;
-  }
-
-  header .nav a {
-    font-size: 14px;
-  }
-
-  header .btn-outline-primary {
-    font-size: 12px;
-  }
-}
+} 
