@@ -269,45 +269,22 @@ footer {
   }
 
 
-/* Responsive Styles for Mobile Devices */
-@media (max-width: 768px) {
-  body {
-    padding: 20px; /* Add some padding on mobile */
-  }
 
-  .container {
-    width: 100%; /* Full width on mobile */
-    padding: 20px; /* Add padding for better spacing */
-    box-shadow: none; /* Remove shadow for a cleaner look */
-  }
-
-  h1 {
-    font-size: 24px; /* Adjust heading size */
-  }
-
-  p {
-    font-size: 12px; /* Adjust paragraph size */
-  }
-
-  button {
-    font-size: 14px; /* Increase button font size */
-    padding: 10px 30px; /* Adjust button padding */
-  }
-
-  input {
-    padding: 10px; /* Adjust input padding */
-  }
-
-  .overlay-panel {
-    padding: 0 20px; /* Adjust overlay panel padding */
-  }
-
-  .social-container a {
-    height: 30px; /* Adjust social icon size */
-    width: 30px; /* Adjust social icon size */
-  }
-
-  footer {
-    font-size: 12px; /* Adjust footer font size */
-  }
+/* Hamburger Menu */
+.hamburger {
+  display: none; 
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+  z-index: 1001;
 } 
+
+/* Show Hamburger on small screens */
+@media (max-width: 768px) {
+  .hamburger {
+      display: block;
+  }
+}
