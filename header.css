@@ -6,7 +6,7 @@ body {
   background: #ffffff;
 }
 
-/* Header styles (consistent across all pages) */
+/* Header styles */
 .header {
   padding: 20px;
   font-size: 24px;
@@ -47,52 +47,43 @@ body {
   transform: scale(1.1);
 }
 
-/* Button Styles */
-.btn {
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-/* Hover Effects for Buttons */
-.btn:hover {
-  background-color: #59B17B;
-  transform: translateY(-2px);
-}
-
-/* Hamburger menu styles (for mobile) */
+/* Hamburger icon */
 .hamburger {
-  display: none; /* Hidden on larger screens */
-  flex-direction: column;
+  display: none; 
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
   cursor: pointer;
+  color: #fff;
+  z-index: 1001;
 }
 
-.hamburger div {
-  width: 25px;
-  height: 3px;
-  background-color: #264B34;
-  margin: 4px 0;
-  transition: all 0.3s ease;
-}
-
-/* Mobile view styles */
 @media (max-width: 768px) {
-  .nav {
-    flex-direction: column;
-    display: none; /* Hide menu by default on mobile */
-  }
-
-  .header {
-    justify-content: space-between;
-  }
-
   .hamburger {
-    display: flex; /* Show hamburger menu */
+    display: block;
   }
 
-  .hamburger.active + .nav {
-    display: flex; /* Show nav links when hamburger is clicked */
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #00796b;
+    width: 100%;
+    z-index: 1000;
+    text-align: right;
+    padding: 1rem;
+    align-items: flex-end;
+    padding-right: 20px;
   }
 
-  .logo-text {
-    font-size: 20px;
+  .nav.show {
+    display: flex;
+  }
+
+  .nav-link {
+    margin: 1rem 0;
   }
 }

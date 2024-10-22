@@ -280,7 +280,7 @@ footer {
   cursor: pointer;
   color: #fff;
   z-index: 1001;
-}
+} 
 
 /* Show Hamburger on small screens */
 @media (max-width: 768px) {
